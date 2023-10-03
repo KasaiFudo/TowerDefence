@@ -1,0 +1,62 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &5600401305575077805
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3779119850077377737}
+  - component: {fileID: 774983827642459478}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3779119850077377737
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5600401305575077805}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -3.0213063, y: -6.792861, z: -3.9519951}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &774983827642459478
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5600401305575077805}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2af3f2496cea479419b8d3d4b1b63325, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _enemy: {fileID: 1413968838660394164, guid: fd34d4d5f290fea4e999293d694fe4ab, type: 3}
+  _secondsUntilSpawn: 0.5
+  _gameInterface: {fileID: 0}
+  _deadMenu: {fileID: 0}
+  _levelUpMenu: {fileID: 0}
+  _skills:
+  - {fileID: 6416649005791906350, guid: 8a001a051ba671546b3f19b5e68f3a28, type: 3}
+  - {fileID: 2824820091096440380, guid: f632fb9d4a5be854f92cee2094e97e3f, type: 3}
+  - {fileID: 5105819219488575694, guid: 8032d221acd27b64fbfe2f584a730d28, type: 3}
+  - {fileID: 2305281307594205996, guid: 00f4f4124f8b57d478737dbb9a430bd0, type: 3}
+  - {fileID: 6186963250100039576, guid: de0fd42aa69837a40a93d1e13944704a, type: 3}
+  _skillsPos:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  _camera: {fileID: 0}
