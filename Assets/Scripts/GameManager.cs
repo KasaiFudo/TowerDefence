@@ -9,14 +9,12 @@ using UnityEngine.UI;
 public class GameManager : MonoBehaviour
 {
     [SerializeField] private GameObject _enemy;
-    [SerializeField] private float _secondsUntilSpawn = 3f;
     [SerializeField] private GameObject _gameInterface;
     [SerializeField] private GameObject _deadMenu;
     [SerializeField] private GameObject _levelUpMenu;
     [SerializeField] private TMP_Text _gameTimer;
     [SerializeField] private List<Transform> _skillsPos;
     [SerializeField] private List<Button> _availableSkills;
-    private Camera _camera;
     private Slider _sliderLVL; 
     private TMP_Text _textHealth;
     private TMP_Text _textCooldown;
@@ -31,14 +29,11 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         _skills = GetComponent<Skills>();
-        _camera = Camera.main;
         _textCooldown = GameObject.Find("Cooldown").GetComponent<TMP_Text>();
         _textHealth = GameObject.Find("HP").GetComponent<TMP_Text>();
         _tower = GameObject.Find("Tower").GetComponent<Tower>();
         _sliderLVL = GameObject.Find("SliderLVL").GetComponent<Slider>();
 
-        if(_tower != null )
-            StartCoroutine(ISpawnTimer());
         StartCoroutine(IGameTimer());
     }
     private void Update()
@@ -80,38 +75,24 @@ public class GameManager : MonoBehaviour
         float buffer = 1000f;  // adjust this based on the size of your objects
         Vector3 worldMax = Camera.main.ScreenToWorldPoint(new Vector2(-buffer, -buffer));
         Vector3 worldMin = Camera.main.ScreenToWorldPoint(new Vector2(Screen.width + buffer, Screen.height + buffer));
-        for(int i = 0; i > _enemyCount; i++)
+        for(int i = 0; i < _enemyCount; i++)
         {
             spawnPosition[i] = new Vector3(Random.Range(worldMin.x, worldMax.x), 0, Random.Range(worldMin.z, worldMax.z));
         }
 
         Vector3 CameraDownLeftPoint = Camera.main.ScreenToWorldPoint(new Vector2(0, 0));
         Vector3 CameraUpRightPoint = Camera.main.ScreenToWorldPoint(new Vector2(Screen.width, Screen.height));
-        //if (spawnPosition.x < CameraDownLeftPoint.x || spawnPosition.x > CameraUpRightPoint.x && spawnPosition.z < CameraDownLeftPoint.z || spawnPosition.z > CameraUpRightPoint.z) //No spawn enemyes in camera
-        //{
-        //    Create(_enemy, spawnPosition);
-        //}
         Create(_enemy, spawnPosition);
 
     }
     private void Create(GameObject obj, Vector3[] position)
     {
-        if (_wave % 2 != 0)
+        for (int i = 0; i < _enemyCount; i++)
         {
-            for(int i = 0; i < _enemyCount; i++)
-            {
-                var enemyStats = Instantiate(obj, position[i], Quaternion.identity).GetComponent<Enemy>();
-                enemyStats.EnemyHP += _tower.Level * 3;
-                enemyStats.EnemyExp += _tower.Level * 2;
-                enemyStats.EnemyDamage += 3;
-            }
-        }
-        else 
-        {
-            for (int i = 0; i < _enemyCount; i++)
-            {
-                Instantiate(obj, position[i], Quaternion.identity);
-            }
+            var enemyStats = Instantiate(obj, position[i], Quaternion.identity).GetComponent<Enemy>();
+            enemyStats.EnemyHP += _tower.Level + _wave * 1.1f;
+            enemyStats.EnemyExp += _tower.Level + _wave * 1.1f;
+            enemyStats.EnemyDamage += _tower.Level + _wave * 1.1f;
         }
     }
 
@@ -132,26 +113,21 @@ public class GameManager : MonoBehaviour
             StopAllCoroutines();
         }
     }
-    private IEnumerator ISpawnTimer()
-    {
-        while (true)
-        {
-            SpawnEnemy();
-            yield return new WaitForSeconds(_secondsUntilSpawn);
-        }
-    }
     private IEnumerator IGameTimer()
     {
+        SpawnEnemy();
         while (true)
         {
             if (_seconds == 59)
             {
-
                 _minunes++;
                 _seconds = -1;
+                _wave++;
+                SpawnEnemy();
             }
-            if(_seconds == 30)
+            if (_seconds == 30)
             {
+                SpawnEnemy();
                 _wave++;
             }
             _seconds += _delta;

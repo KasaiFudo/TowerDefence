@@ -15,14 +15,14 @@ public class Tower : MonoBehaviour
     private bool _isCooldown = false;
     private float _cooldown;
     private static float _attackSpeed = 1.5f;
-    private static int _experience = 0;
+    private static float _experience = 0;
     private static int _maxExperience = 100;
     private static int _level = 0;
     private int _currentDamage = 10;
     private float _health = 100;
     private float _maxHealth = 100;
     [NonSerialized] public List<Transform> enemyes = new();
-    public int Experience { get { return _experience; } set { _experience = value; } }
+    public float Experience { get { return _experience; } set { _experience = value; } }
     public float AttackSpeed { get { return _attackSpeed; } set { _attackSpeed = value; } }
     public int CurrentDamage { get { return _currentDamage; } set { _currentDamage = value; } }
     public float Health { get { return _health; } set { _health = value; } }

@@ -8,14 +8,14 @@ public class Enemy : MonoBehaviour
     private Transform _target;
     private Rigidbody _rb;
     private Tower _tower;
-    private int _enemyHP = 10;
-    private int _enemyExp = 20;
-    private int _enemyDamage = 10;
+    private float _enemyHP = 10;
+    private float _enemyExp = 20;
+    private float _enemyDamage = 10;
 
     public Tower Tower { get { return Tower; } }
-    public int EnemyHP{ get { return _enemyHP; } set { _enemyHP = value; } }
-    public int EnemyExp { get { return _enemyExp; } set { _enemyExp = value; } }
-    public int EnemyDamage { get { return _enemyDamage; } set { _enemyDamage = value; } }
+    public float EnemyHP{ get { return _enemyHP; } set { _enemyHP = value; } }
+    public float EnemyExp { get { return _enemyExp; } set { _enemyExp = value; } }
+    public float EnemyDamage { get { return _enemyDamage; } set { _enemyDamage = value; } }
 
     private void Start()
     {

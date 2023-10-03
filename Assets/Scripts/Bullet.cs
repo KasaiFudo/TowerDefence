@@ -26,6 +26,9 @@ public class Bullet : MonoBehaviour
 
     private void ChasingTarget()
     {
-        transform.position = Vector3.MoveTowards(transform.position, _target.position, _speedBullet * Time.deltaTime); ;
+        if (_target != null)
+            transform.position = Vector3.MoveTowards(transform.position, _target.position, _speedBullet * Time.deltaTime);
+        else
+            Destroy(gameObject);
     }
 }

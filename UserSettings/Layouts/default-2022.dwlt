@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1706.6667
     height: 917.3334
   m_ShowMode: 4
-  m_Title: Inspector
+  m_Title: Scene
   m_RootView: {fileID: 2}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -118,7 +118,7 @@ MonoBehaviour:
   m_MinSize: {x: 400, y: 100}
   m_MaxSize: {x: 32384, y: 16192}
   vertical: 1
-  controlID: 129
+  controlID: 40
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -143,7 +143,7 @@ MonoBehaviour:
   m_MinSize: {x: 400, y: 100}
   m_MaxSize: {x: 32384, y: 16192}
   vertical: 0
-  controlID: 130
+  controlID: 41
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -168,7 +168,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 100}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 1
-  controlID: 52
+  controlID: 42
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -194,7 +194,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 50}
   m_MaxSize: {x: 24288, y: 8096}
   vertical: 0
-  controlID: 53
+  controlID: 43
 --- !u!114 &9
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -924,9 +924,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -0.20204401, y: -9.340533, z: 0.9916539}
+    m_Target: {x: -4.0133896, y: -2.6082115, z: 7.6547318}
     speed: 2
-    m_Value: {x: -0.20204401, y: -9.340533, z: 0.9916539}
+    m_Value: {x: -4.0133896, y: -2.6082115, z: 7.6547318}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -972,13 +972,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: 0.3902643, y: -0.06565062, z: 0.027911894, w: 0.9179389}
+    m_Target: {x: 0.24529326, y: -0.13988648, z: 0.035793655, w: 0.9586459}
     speed: 2
-    m_Value: {x: 0.3902629, y: -0.06565038, z: 0.027911793, w: 0.9179356}
+    m_Value: {x: 0.2452908, y: -0.13988508, z: 0.035793297, w: 0.9586363}
   m_Size:
-    m_Target: 15.921848
+    m_Target: 15.23536
     speed: 2
-    m_Value: 15.921848
+    m_Value: 15.23536
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -1129,7 +1129,7 @@ MonoBehaviour:
   m_LastFolders:
   - Assets/Scripts
   m_LastFoldersGridSize: -1
-  m_LastProjectPath: C:\Users\Kasai\TowerDefence
+  m_LastProjectPath: D:\TowerDefence
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
