@@ -355,7 +355,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &362344580
 GameObject:
@@ -468,7 +468,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.03747917, y: 0.7974815}
   m_AnchorMax: {x: 0.26024997, y: 0.8446667}
-  m_AnchoredPosition: {x: -111, y: 0}
+  m_AnchoredPosition: {x: -111, y: 51}
   m_SizeDelta: {x: -230, y: -1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &513341461
@@ -679,7 +679,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.03747917, y: 0.85200006}
   m_AnchorMax: {x: 0.30200002, y: 0.93100005}
-  m_AnchoredPosition: {x: -153, y: 0}
+  m_AnchoredPosition: {x: -153, y: 51}
   m_SizeDelta: {x: -308, y: -35}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &698576681
@@ -908,7 +908,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 29, y: -175}
+  m_AnchoredPosition: {x: 29, y: -163}
   m_SizeDelta: {x: 428.3928, y: 95.7016}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &798155462
@@ -1773,7 +1773,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -118, y: -52.5}
+  m_AnchoredPosition: {x: -118, y: -76.4}
   m_SizeDelta: {x: 171.3895, y: 63.6843}
   m_Pivot: {x: 0.50000006, y: 0.5}
 --- !u!114 &2133329717
@@ -2077,7 +2077,7 @@ Transform:
   - {fileID: 7949757005987558658}
   - {fileID: 8620789476784157869}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &5040694254452706077
 MeshRenderer:
@@ -2156,7 +2156,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _enemy: {fileID: 1413968838660394164, guid: fd34d4d5f290fea4e999293d694fe4ab, type: 3}
-  _secondsUntilSpawn: 5
   _gameInterface: {fileID: 1568507834}
   _deadMenu: {fileID: 1205643378}
   _levelUpMenu: {fileID: 1371451374}
