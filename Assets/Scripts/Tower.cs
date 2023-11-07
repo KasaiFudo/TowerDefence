@@ -48,7 +48,7 @@ public class Tower : MonoBehaviour
         if (collision.gameObject.CompareTag("Enemy"))
         {
             _health -= collision.gameObject.GetComponent<Enemy>().EnemyDamage;
-            if(_health <= 0)
+            if (_health <= 0)
                 Destroy(gameObject);
         }
     }
@@ -56,7 +56,7 @@ public class Tower : MonoBehaviour
     {
         if (!_isCooldown && enemyes.Count != 0)
         {
-            var bullet = Instantiate(_bullet,_spawnBulletPoint.position, Quaternion.identity);
+            var bullet = Instantiate(_bullet, _spawnBulletPoint.position, Quaternion.identity);
             bullet.GetComponent<Bullet>().Target = FindClosestObject(enemyes);
             bullet.GetComponent<Bullet>().Damage = _currentDamage;
             StartCoroutine(ShootCooldown()); //запускает кулдаун
@@ -71,13 +71,13 @@ public class Tower : MonoBehaviour
                 enemyes.RemoveAt(i);
             }
         }
-        if(gameObject == null)
+        if (gameObject == null)
             enemyes.Clear();
     }
 
     private void LevelControl()
     {
-        if(_experience >= _maxExperience)
+        if (_experience >= _maxExperience)
         {
             _level++;
             _maxExperience *= 2;

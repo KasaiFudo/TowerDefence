@@ -1,6 +1,5 @@
 
 using UnityEngine;
-using static UnityEditor.PlayerSettings;
 
 public class Enemy : MonoBehaviour
 {
@@ -13,7 +12,7 @@ public class Enemy : MonoBehaviour
     private float _enemyDamage = 10;
 
     public Tower Tower { get { return Tower; } }
-    public float EnemyHP{ get { return _enemyHP; } set { _enemyHP = value; } }
+    public float EnemyHP { get { return _enemyHP; } set { _enemyHP = value; } }
     public float EnemyExp { get { return _enemyExp; } set { _enemyExp = value; } }
     public float EnemyDamage { get { return _enemyDamage; } set { _enemyDamage = value; } }
 
@@ -29,9 +28,9 @@ public class Enemy : MonoBehaviour
     }
     private void FixedUpdate()
     {
-        //Attraction();
+        Attraction();
     }
-    private void HPControl() 
+    private void HPControl()
     {
         if (_enemyHP <= 0)
         {
@@ -44,13 +43,13 @@ public class Enemy : MonoBehaviour
     {
         if (_target != null)
         {
-            Vector3 randomVector = new Vector3(Random.Range(-30,30), 0, Random.Range(-30, 30));
+            Vector3 randomVector = new Vector3(Random.Range(-30, 30), 0, Random.Range(-30, 30));
             _rb.AddForce((_target.transform.position - gameObject.transform.position + randomVector).normalized * _speed);
         }
         else
             Destroy(gameObject);
     }
-    
+
     public void Kill()
     {
         Destroy(gameObject);
